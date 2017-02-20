@@ -1,0 +1,79 @@
+body {
+    background-color: #cad9d9
+}
+td {
+    border: 1px solid rgba(128, 128, 128, 0.12);
+    width: 10px;
+    line-height: 10px;
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+    margin: 5% auto;
+    border: 2px solid black;
+    background-size: 100%;
+}
+.black {
+    background-color: black
+}
+#start, #erase {
+    width: 150px;
+    line-height: 30px;
+    background-color: chocolate;
+    text-align: center;
+    border: 4px double black;
+    border-radius: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+tr:last-child td {
+    background-image: url(../img/torn-down.gif);
+    background-repeat: no-repeat;
+    background-position: bottom
+}
+td:first-child {
+    background-image: url(../img/torn-left.gif);
+    background-repeat: no-repeat;
+}
+td:last-child {
+    background-image: url(../img/torn-right.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+tr:first-child td {
+    background-image: url(../img/torn-up.gif);
+    background-repeat: no-repeat;
+    background-position: top
+}
+.carrot {
+    background-image: url(../img/carrot.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.face {
+    background-image: url(../img/face.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#leftSide {
+    width: 30%;
+    float: left;
+}
+#carrot {
+    padding: 30px;
+    font-size: 1.5em;
+}
+.bonus {
+    background-image: url(../img/bonus.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.red {
+    background-color: darkred
+}
+#length1 {
+    background-color: #2b2646
+}
+#start:hover,#erase:hover{
+    background-color: grey
+}

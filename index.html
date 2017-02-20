@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Snake game</title>
+    <link rel="stylesheet" href="css/snake.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/snake.js"></script>
+</head>
+
+<body>
+    <div id="leftSide">
+        <table>
+            <tr>
+                <td data-hor="1" data-ver="1">&nbsp;</td>
+                <td data-hor="1" data-ver="2">&nbsp;</td>
+                <td data-hor="1" data-ver="3">&nbsp;</td>
+                <td data-hor="1" data-ver="4">&nbsp;</td>
+                <td data-hor="1" data-ver="5">&nbsp;</td>
+                <td data-hor="1" data-ver="6">&nbsp;</td>
+                <td data-hor="1" data-ver="7">&nbsp;</td>
+                <td data-hor="1" data-ver="8">&nbsp;</td>
+                <td data-hor="1" data-ver="9">&nbsp;</td>
+                <td data-hor="1" data-ver="10">&nbsp;</td>
+                <td data-hor="1" data-ver="11">&nbsp;</td>
+                <td data-hor="1" data-ver="12">&nbsp;</td>
+                <td data-hor="1" data-ver="13">&nbsp;</td>
+                <td data-hor="1" data-ver="14">&nbsp;</td>
+                <td data-hor="1" data-ver="15">&nbsp;</td>
+                <td data-hor="1" data-ver="16">&nbsp;</td>
+                <td data-hor="1" data-ver="17">&nbsp;</td>
+                <td data-hor="1" data-ver="18">&nbsp;</td>
+                <td data-hor="1" data-ver="19">&nbsp;</td>
+                <td data-hor="1" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="2" data-ver="1">&nbsp;</td>
+                <td data-hor="2" data-ver="2">&nbsp;</td>
+                <td data-hor="2" data-ver="3">&nbsp;</td>
+                <td data-hor="2" data-ver="4">&nbsp;</td>
+                <td data-hor="2" data-ver="5">&nbsp;</td>
+                <td data-hor="2" data-ver="6">&nbsp;</td>
+                <td data-hor="2" data-ver="7">&nbsp;</td>
+                <td data-hor="2" data-ver="8">&nbsp;</td>
+                <td data-hor="2" data-ver="9">&nbsp;</td>
+                <td data-hor="2" data-ver="10">&nbsp;</td>
+                <td data-hor="2" data-ver="11">&nbsp;</td>
+                <td data-hor="2" data-ver="12">&nbsp;</td>
+                <td data-hor="2" data-ver="13">&nbsp;</td>
+                <td data-hor="2" data-ver="14">&nbsp;</td>
+                <td data-hor="2" data-ver="15">&nbsp;</td>
+                <td data-hor="2" data-ver="16">&nbsp;</td>
+                <td data-hor="2" data-ver="17">&nbsp;</td>
+                <td data-hor="2" data-ver="18">&nbsp;</td>
+                <td data-hor="2" data-ver="19">&nbsp;</td>
+                <td data-hor="2" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="3" data-ver="1">&nbsp;</td>
+                <td data-hor="3" data-ver="2">&nbsp;</td>
+                <td data-hor="3" data-ver="3">&nbsp;</td>
+                <td data-hor="3" data-ver="4">&nbsp;</td>
+                <td data-hor="3" data-ver="5">&nbsp;</td>
+                <td data-hor="3" data-ver="6">&nbsp;</td>
+                <td data-hor="3" data-ver="7">&nbsp;</td>
+                <td data-hor="3" data-ver="8">&nbsp;</td>
+                <td data-hor="3" data-ver="9">&nbsp;</td>
+                <td data-hor="3" data-ver="10">&nbsp;</td>
+                <td data-hor="3" data-ver="11">&nbsp;</td>
+                <td data-hor="3" data-ver="12">&nbsp;</td>
+                <td data-hor="3" data-ver="13">&nbsp;</td>
+                <td data-hor="3" data-ver="14">&nbsp;</td>
+                <td data-hor="3" data-ver="15">&nbsp;</td>
+                <td data-hor="3" data-ver="16">&nbsp;</td>
+                <td data-hor="3" data-ver="17">&nbsp;</td>
+                <td data-hor="3" data-ver="18">&nbsp;</td>
+                <td data-hor="3" data-ver="19">&nbsp;</td>
+                <td data-hor="3" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="4" data-ver="1">&nbsp;</td>
+                <td data-hor="4" data-ver="2">&nbsp;</td>
+                <td data-hor="4" data-ver="3">&nbsp;</td>
+                <td data-hor="4" data-ver="4">&nbsp;</td>
+                <td data-hor="4" data-ver="5">&nbsp;</td>
+                <td data-hor="4" data-ver="6">&nbsp;</td>
+                <td data-hor="4" data-ver="7">&nbsp;</td>
+                <td data-hor="4" data-ver="8">&nbsp;</td>
+                <td data-hor="4" data-ver="9">&nbsp;</td>
+                <td data-hor="4" data-ver="10">&nbsp;</td>
+                <td data-hor="4" data-ver="11">&nbsp;</td>
+                <td data-hor="4" data-ver="12">&nbsp;</td>
+                <td data-hor="4" data-ver="13">&nbsp;</td>
+                <td data-hor="4" data-ver="14">&nbsp;</td>
+                <td data-hor="4" data-ver="15">&nbsp;</td>
+                <td data-hor="4" data-ver="16">&nbsp;</td>
+                <td data-hor="4" data-ver="17">&nbsp;</td>
+                <td data-hor="4" data-ver="18">&nbsp;</td>
+                <td data-hor="4" data-ver="19">&nbsp;</td>
+                <td data-hor="4" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="5" data-ver="1">&nbsp;</td>
+                <td data-hor="5" data-ver="2">&nbsp;</td>
+                <td data-hor="5" data-ver="3">&nbsp;</td>
+                <td data-hor="5" data-ver="4">&nbsp;</td>
+                <td data-hor="5" data-ver="5">&nbsp;</td>
+                <td data-hor="5" data-ver="6">&nbsp;</td>
+                <td data-hor="5" data-ver="7">&nbsp;</td>
+                <td data-hor="5" data-ver="8">&nbsp;</td>
+                <td data-hor="5" data-ver="9">&nbsp;</td>
+                <td data-hor="5" data-ver="10">&nbsp;</td>
+                <td data-hor="5" data-ver="11">&nbsp;</td>
+                <td data-hor="5" data-ver="12">&nbsp;</td>
+                <td data-hor="5" data-ver="13">&nbsp;</td>
+                <td data-hor="5" data-ver="14">&nbsp;</td>
+                <td data-hor="5" data-ver="15">&nbsp;</td>
+                <td data-hor="5" data-ver="16">&nbsp;</td>
+                <td data-hor="5" data-ver="17">&nbsp;</td>
+                <td data-hor="5" data-ver="18">&nbsp;</td>
+                <td data-hor="5" data-ver="19">&nbsp;</td>
+                <td data-hor="5" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="6" data-ver="1">&nbsp;</td>
+                <td data-hor="6" data-ver="2">&nbsp;</td>
+                <td data-hor="6" data-ver="3">&nbsp;</td>
+                <td data-hor="6" data-ver="4">&nbsp;</td>
+                <td data-hor="6" data-ver="5">&nbsp;</td>
+                <td data-hor="6" data-ver="6">&nbsp;</td>
+                <td data-hor="6" data-ver="7">&nbsp;</td>
+                <td data-hor="6" data-ver="8">&nbsp;</td>
+                <td data-hor="6" data-ver="9">&nbsp;</td>
+                <td data-hor="6" data-ver="10">&nbsp;</td>
+                <td data-hor="6" data-ver="11">&nbsp;</td>
+                <td data-hor="6" data-ver="12">&nbsp;</td>
+                <td data-hor="6" data-ver="13">&nbsp;</td>
+                <td data-hor="6" data-ver="14">&nbsp;</td>
+                <td data-hor="6" data-ver="15">&nbsp;</td>
+                <td data-hor="6" data-ver="16">&nbsp;</td>
+                <td data-hor="6" data-ver="17">&nbsp;</td>
+                <td data-hor="6" data-ver="18">&nbsp;</td>
+                <td data-hor="6" data-ver="19">&nbsp;</td>
+                <td data-hor="6" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="7" data-ver="1">&nbsp;</td>
+                <td data-hor="7" data-ver="2">&nbsp;</td>
+                <td data-hor="7" data-ver="3">&nbsp;</td>
+                <td data-hor="7" data-ver="4">&nbsp;</td>
+                <td data-hor="7" data-ver="5">&nbsp;</td>
+                <td data-hor="7" data-ver="6">&nbsp;</td>
+                <td data-hor="7" data-ver="7">&nbsp;</td>
+                <td data-hor="7" data-ver="8">&nbsp;</td>
+                <td data-hor="7" data-ver="9">&nbsp;</td>
+                <td data-hor="7" data-ver="10">&nbsp;</td>
+                <td data-hor="7" data-ver="11">&nbsp;</td>
+                <td data-hor="7" data-ver="12">&nbsp;</td>
+                <td data-hor="7" data-ver="13">&nbsp;</td>
+                <td data-hor="7" data-ver="14">&nbsp;</td>
+                <td data-hor="7" data-ver="15">&nbsp;</td>
+                <td data-hor="7" data-ver="16">&nbsp;</td>
+                <td data-hor="7" data-ver="17">&nbsp;</td>
+                <td data-hor="7" data-ver="18">&nbsp;</td>
+                <td data-hor="7" data-ver="19">&nbsp;</td>
+                <td data-hor="7" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="8" data-ver="1">&nbsp;</td>
+                <td data-hor="8" data-ver="2">&nbsp;</td>
+                <td data-hor="8" data-ver="3">&nbsp;</td>
+                <td data-hor="8" data-ver="4">&nbsp;</td>
+                <td data-hor="8" data-ver="5">&nbsp;</td>
+                <td data-hor="8" data-ver="6">&nbsp;</td>
+                <td data-hor="8" data-ver="7">&nbsp;</td>
+                <td data-hor="8" data-ver="8">&nbsp;</td>
+                <td data-hor="8" data-ver="9">&nbsp;</td>
+                <td data-hor="8" data-ver="10">&nbsp;</td>
+                <td data-hor="8" data-ver="11">&nbsp;</td>
+                <td data-hor="8" data-ver="12">&nbsp;</td>
+                <td data-hor="8" data-ver="13">&nbsp;</td>
+                <td data-hor="8" data-ver="14">&nbsp;</td>
+                <td data-hor="8" data-ver="15">&nbsp;</td>
+                <td data-hor="8" data-ver="16">&nbsp;</td>
+                <td data-hor="8" data-ver="17">&nbsp;</td>
+                <td data-hor="8" data-ver="18">&nbsp;</td>
+                <td data-hor="8" data-ver="19">&nbsp;</td>
+                <td data-hor="8" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="9" data-ver="1">&nbsp;</td>
+                <td data-hor="9" data-ver="2">&nbsp;</td>
+                <td data-hor="9" data-ver="3">&nbsp;</td>
+                <td data-hor="9" data-ver="4">&nbsp;</td>
+                <td data-hor="9" data-ver="5">&nbsp;</td>
+                <td data-hor="9" data-ver="6">&nbsp;</td>
+                <td data-hor="9" data-ver="7">&nbsp;</td>
+                <td data-hor="9" data-ver="8">&nbsp;</td>
+                <td data-hor="9" data-ver="9">&nbsp;</td>
+                <td data-hor="9" data-ver="10">&nbsp;</td>
+                <td data-hor="9" data-ver="11">&nbsp;</td>
+                <td data-hor="9" data-ver="12">&nbsp;</td>
+                <td data-hor="9" data-ver="13">&nbsp;</td>
+                <td data-hor="9" data-ver="14">&nbsp;</td>
+                <td data-hor="9" data-ver="15">&nbsp;</td>
+                <td data-hor="9" data-ver="16">&nbsp;</td>
+                <td data-hor="9" data-ver="17">&nbsp;</td>
+                <td data-hor="9" data-ver="18">&nbsp;</td>
+                <td data-hor="9" data-ver="19">&nbsp;</td>
+                <td data-hor="9" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="10" data-ver="1">&nbsp;</td>
+                <td data-hor="10" data-ver="2">&nbsp;</td>
+                <td data-hor="10" data-ver="3">&nbsp;</td>
+                <td data-hor="10" data-ver="4">&nbsp;</td>
+                <td data-hor="10" data-ver="5">&nbsp;</td>
+                <td data-hor="10" data-ver="6">&nbsp;</td>
+                <td data-hor="10" data-ver="7">&nbsp;</td>
+                <td data-hor="10" data-ver="8">&nbsp;</td>
+                <td data-hor="10" data-ver="9">&nbsp;</td>
+                <td data-hor="10" data-ver="10">&nbsp;</td>
+                <td data-hor="10" data-ver="11">&nbsp;</td>
+                <td data-hor="10" data-ver="12">&nbsp;</td>
+                <td data-hor="10" data-ver="13">&nbsp;</td>
+                <td data-hor="10" data-ver="14">&nbsp;</td>
+                <td data-hor="10" data-ver="15">&nbsp;</td>
+                <td data-hor="10" data-ver="16">&nbsp;</td>
+                <td data-hor="10" data-ver="17">&nbsp;</td>
+                <td data-hor="10" data-ver="18">&nbsp;</td>
+                <td data-hor="10" data-ver="19">&nbsp;</td>
+                <td data-hor="10" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="11" data-ver="1">&nbsp;</td>
+                <td data-hor="11" data-ver="2">&nbsp;</td>
+                <td data-hor="11" data-ver="3">&nbsp;</td>
+                <td data-hor="11" data-ver="4">&nbsp;</td>
+                <td data-hor="11" data-ver="5">&nbsp;</td>
+                <td data-hor="11" data-ver="6">&nbsp;</td>
+                <td data-hor="11" data-ver="7">&nbsp;</td>
+                <td data-hor="11" data-ver="8">&nbsp;</td>
+                <td data-hor="11" data-ver="9">&nbsp;</td>
+                <td data-hor="11" data-ver="10">&nbsp;</td>
+                <td data-hor="11" data-ver="11">&nbsp;</td>
+                <td data-hor="11" data-ver="12">&nbsp;</td>
+                <td data-hor="11" data-ver="13">&nbsp;</td>
+                <td data-hor="11" data-ver="14">&nbsp;</td>
+                <td data-hor="11" data-ver="15">&nbsp;</td>
+                <td data-hor="11" data-ver="16">&nbsp;</td>
+                <td data-hor="11" data-ver="17">&nbsp;</td>
+                <td data-hor="11" data-ver="18">&nbsp;</td>
+                <td data-hor="11" data-ver="19">&nbsp;</td>
+                <td data-hor="11" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="12" data-ver="1">&nbsp;</td>
+                <td data-hor="12" data-ver="2">&nbsp;</td>
+                <td data-hor="12" data-ver="3">&nbsp;</td>
+                <td data-hor="12" data-ver="4">&nbsp;</td>
+                <td data-hor="12" data-ver="5">&nbsp;</td>
+                <td data-hor="12" data-ver="6">&nbsp;</td>
+                <td data-hor="12" data-ver="7">&nbsp;</td>
+                <td data-hor="12" data-ver="8">&nbsp;</td>
+                <td data-hor="12" data-ver="9">&nbsp;</td>
+                <td data-hor="12" data-ver="10">&nbsp;</td>
+                <td data-hor="12" data-ver="11">&nbsp;</td>
+                <td data-hor="12" data-ver="12">&nbsp;</td>
+                <td data-hor="12" data-ver="13">&nbsp;</td>
+                <td data-hor="12" data-ver="14">&nbsp;</td>
+                <td data-hor="12" data-ver="15">&nbsp;</td>
+                <td data-hor="12" data-ver="16">&nbsp;</td>
+                <td data-hor="12" data-ver="17">&nbsp;</td>
+                <td data-hor="12" data-ver="18">&nbsp;</td>
+                <td data-hor="12" data-ver="19">&nbsp;</td>
+                <td data-hor="12" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="13" data-ver="1">&nbsp;</td>
+                <td data-hor="13" data-ver="2">&nbsp;</td>
+                <td data-hor="13" data-ver="3">&nbsp;</td>
+                <td data-hor="13" data-ver="4">&nbsp;</td>
+                <td data-hor="13" data-ver="5">&nbsp;</td>
+                <td data-hor="13" data-ver="6">&nbsp;</td>
+                <td data-hor="13" data-ver="7">&nbsp;</td>
+                <td data-hor="13" data-ver="8">&nbsp;</td>
+                <td data-hor="13" data-ver="9">&nbsp;</td>
+                <td data-hor="13" data-ver="10">&nbsp;</td>
+                <td data-hor="13" data-ver="11">&nbsp;</td>
+                <td data-hor="13" data-ver="12">&nbsp;</td>
+                <td data-hor="13" data-ver="13">&nbsp;</td>
+                <td data-hor="13" data-ver="14">&nbsp;</td>
+                <td data-hor="13" data-ver="15">&nbsp;</td>
+                <td data-hor="13" data-ver="16">&nbsp;</td>
+                <td data-hor="13" data-ver="17">&nbsp;</td>
+                <td data-hor="13" data-ver="18">&nbsp;</td>
+                <td data-hor="13" data-ver="19">&nbsp;</td>
+                <td data-hor="13" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="14" data-ver="1">&nbsp;</td>
+                <td data-hor="14" data-ver="2">&nbsp;</td>
+                <td data-hor="14" data-ver="3">&nbsp;</td>
+                <td data-hor="14" data-ver="4">&nbsp;</td>
+                <td data-hor="14" data-ver="5">&nbsp;</td>
+                <td data-hor="14" data-ver="6">&nbsp;</td>
+                <td data-hor="14" data-ver="7">&nbsp;</td>
+                <td data-hor="14" data-ver="8">&nbsp;</td>
+                <td data-hor="14" data-ver="9">&nbsp;</td>
+                <td data-hor="14" data-ver="10">&nbsp;</td>
+                <td data-hor="14" data-ver="11">&nbsp;</td>
+                <td data-hor="14" data-ver="12">&nbsp;</td>
+                <td data-hor="14" data-ver="13">&nbsp;</td>
+                <td data-hor="14" data-ver="14">&nbsp;</td>
+                <td data-hor="14" data-ver="15">&nbsp;</td>
+                <td data-hor="14" data-ver="16">&nbsp;</td>
+                <td data-hor="14" data-ver="17">&nbsp;</td>
+                <td data-hor="14" data-ver="18">&nbsp;</td>
+                <td data-hor="14" data-ver="19">&nbsp;</td>
+                <td data-hor="14" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="15" data-ver="1">&nbsp;</td>
+                <td data-hor="15" data-ver="2">&nbsp;</td>
+                <td data-hor="15" data-ver="3">&nbsp;</td>
+                <td data-hor="15" data-ver="4">&nbsp;</td>
+                <td data-hor="15" data-ver="5">&nbsp;</td>
+                <td data-hor="15" data-ver="6">&nbsp;</td>
+                <td data-hor="15" data-ver="7">&nbsp;</td>
+                <td data-hor="15" data-ver="8">&nbsp;</td>
+                <td data-hor="15" data-ver="9">&nbsp;</td>
+                <td data-hor="15" data-ver="10">&nbsp;</td>
+                <td data-hor="15" data-ver="11">&nbsp;</td>
+                <td data-hor="15" data-ver="12">&nbsp;</td>
+                <td data-hor="15" data-ver="13">&nbsp;</td>
+                <td data-hor="15" data-ver="14">&nbsp;</td>
+                <td data-hor="15" data-ver="15">&nbsp;</td>
+                <td data-hor="15" data-ver="16">&nbsp;</td>
+                <td data-hor="15" data-ver="17">&nbsp;</td>
+                <td data-hor="15" data-ver="18">&nbsp;</td>
+                <td data-hor="15" data-ver="19">&nbsp;</td>
+                <td data-hor="15" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="16" data-ver="1">&nbsp;</td>
+                <td data-hor="16" data-ver="2">&nbsp;</td>
+                <td data-hor="16" data-ver="3">&nbsp;</td>
+                <td data-hor="16" data-ver="4">&nbsp;</td>
+                <td data-hor="16" data-ver="5">&nbsp;</td>
+                <td data-hor="16" data-ver="6">&nbsp;</td>
+                <td data-hor="16" data-ver="7">&nbsp;</td>
+                <td data-hor="16" data-ver="8">&nbsp;</td>
+                <td data-hor="16" data-ver="9">&nbsp;</td>
+                <td data-hor="16" data-ver="10">&nbsp;</td>
+                <td data-hor="16" data-ver="11">&nbsp;</td>
+                <td data-hor="16" data-ver="12">&nbsp;</td>
+                <td data-hor="16" data-ver="13">&nbsp;</td>
+                <td data-hor="16" data-ver="14">&nbsp;</td>
+                <td data-hor="16" data-ver="15">&nbsp;</td>
+                <td data-hor="16" data-ver="16">&nbsp;</td>
+                <td data-hor="16" data-ver="17">&nbsp;</td>
+                <td data-hor="16" data-ver="18">&nbsp;</td>
+                <td data-hor="16" data-ver="19">&nbsp;</td>
+                <td data-hor="16" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="17" data-ver="1">&nbsp;</td>
+                <td data-hor="17" data-ver="2">&nbsp;</td>
+                <td data-hor="17" data-ver="3">&nbsp;</td>
+                <td data-hor="17" data-ver="4">&nbsp;</td>
+                <td data-hor="17" data-ver="5">&nbsp;</td>
+                <td data-hor="17" data-ver="6">&nbsp;</td>
+                <td data-hor="17" data-ver="7">&nbsp;</td>
+                <td data-hor="17" data-ver="8">&nbsp;</td>
+                <td data-hor="17" data-ver="9">&nbsp;</td>
+                <td data-hor="17" data-ver="10">&nbsp;</td>
+                <td data-hor="17" data-ver="11">&nbsp;</td>
+                <td data-hor="17" data-ver="12">&nbsp;</td>
+                <td data-hor="17" data-ver="13">&nbsp;</td>
+                <td data-hor="17" data-ver="14">&nbsp;</td>
+                <td data-hor="17" data-ver="15">&nbsp;</td>
+                <td data-hor="17" data-ver="16">&nbsp;</td>
+                <td data-hor="17" data-ver="17">&nbsp;</td>
+                <td data-hor="17" data-ver="18">&nbsp;</td>
+                <td data-hor="17" data-ver="19">&nbsp;</td>
+                <td data-hor="17" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="18" data-ver="1">&nbsp;</td>
+                <td data-hor="18" data-ver="2">&nbsp;</td>
+                <td data-hor="18" data-ver="3">&nbsp;</td>
+                <td data-hor="18" data-ver="4">&nbsp;</td>
+                <td data-hor="18" data-ver="5">&nbsp;</td>
+                <td data-hor="18" data-ver="6">&nbsp;</td>
+                <td data-hor="18" data-ver="7">&nbsp;</td>
+                <td data-hor="18" data-ver="8">&nbsp;</td>
+                <td data-hor="18" data-ver="9">&nbsp;</td>
+                <td data-hor="18" data-ver="10">&nbsp;</td>
+                <td data-hor="18" data-ver="11">&nbsp;</td>
+                <td data-hor="18" data-ver="12">&nbsp;</td>
+                <td data-hor="18" data-ver="13">&nbsp;</td>
+                <td data-hor="18" data-ver="14">&nbsp;</td>
+                <td data-hor="18" data-ver="15">&nbsp;</td>
+                <td data-hor="18" data-ver="16">&nbsp;</td>
+                <td data-hor="18" data-ver="17">&nbsp;</td>
+                <td data-hor="18" data-ver="18">&nbsp;</td>
+                <td data-hor="18" data-ver="19">&nbsp;</td>
+                <td data-hor="18" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="19" data-ver="1">&nbsp;</td>
+                <td data-hor="19" data-ver="2">&nbsp;</td>
+                <td data-hor="19" data-ver="3">&nbsp;</td>
+                <td data-hor="19" data-ver="4">&nbsp;</td>
+                <td data-hor="19" data-ver="5">&nbsp;</td>
+                <td data-hor="19" data-ver="6">&nbsp;</td>
+                <td data-hor="19" data-ver="7">&nbsp;</td>
+                <td data-hor="19" data-ver="8">&nbsp;</td>
+                <td data-hor="19" data-ver="9">&nbsp;</td>
+                <td data-hor="19" data-ver="10">&nbsp;</td>
+                <td data-hor="19" data-ver="11">&nbsp;</td>
+                <td data-hor="19" data-ver="12">&nbsp;</td>
+                <td data-hor="19" data-ver="13">&nbsp;</td>
+                <td data-hor="19" data-ver="14">&nbsp;</td>
+                <td data-hor="19" data-ver="15">&nbsp;</td>
+                <td data-hor="19" data-ver="16">&nbsp;</td>
+                <td data-hor="19" data-ver="17">&nbsp;</td>
+                <td data-hor="19" data-ver="18">&nbsp;</td>
+                <td data-hor="19" data-ver="19">&nbsp;</td>
+                <td data-hor="19" data-ver="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td data-hor="20" data-ver="1">&nbsp;</td>
+                <td data-hor="20" data-ver="2">&nbsp;</td>
+                <td data-hor="20" data-ver="3">&nbsp;</td>
+                <td data-hor="20" data-ver="4">&nbsp;</td>
+                <td data-hor="20" data-ver="5">&nbsp;</td>
+                <td data-hor="20" data-ver="6">&nbsp;</td>
+                <td data-hor="20" data-ver="7">&nbsp;</td>
+                <td data-hor="20" data-ver="8">&nbsp;</td>
+                <td data-hor="20" data-ver="9">&nbsp;</td>
+                <td data-hor="20" data-ver="10">&nbsp;</td>
+                <td data-hor="20" data-ver="11">&nbsp;</td>
+                <td data-hor="20" data-ver="12">&nbsp;</td>
+                <td data-hor="20" data-ver="13">&nbsp;</td>
+                <td data-hor="20" data-ver="14">&nbsp;</td>
+                <td data-hor="20" data-ver="15">&nbsp;</td>
+                <td data-hor="20" data-ver="16">&nbsp;</td>
+                <td data-hor="20" data-ver="17">&nbsp;</td>
+                <td data-hor="20" data-ver="18">&nbsp;</td>
+                <td data-hor="20" data-ver="19">&nbsp;</td>
+                <td data-hor="20" data-ver="20">&nbsp;</td>
+            </tr>
+        </table>
+        <p id="start">START GAME</p>
+    </div>
+    <div id="carrot">Количество съеденных морковок: <span id="totalCarrots"></span>
+        <div>Лучший результат:</div>
+        <div>
+            <span id="name">Anonymous</span><span>: </span><span class="records">0</span>
+        </div>
+        <div id="erase">Очистить</div>
+    </div>
+</body>
+
+</html>
